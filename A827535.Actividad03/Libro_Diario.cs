@@ -29,12 +29,11 @@ namespace A827535.Actividad03
             }
 
         }
-
         public static void MovimientosFuturos(int codigoCuenta, DateTime fecha, ref decimal debe, ref decimal haber)
         {
             if (entradas.Count == 0)
             {
-                Console.WriteLine("No existen asientos cargados en el libro diario.");
+                Console.WriteLine("No existen asientos cargados en el Libro Diario");
             }
             else
             {
@@ -52,7 +51,6 @@ namespace A827535.Actividad03
                 }
             }
         }
-
         public static Asiento Seleccionar()
         {
             var modelo = Asiento.CrearModeloBusqueda();
@@ -64,7 +62,7 @@ namespace A827535.Actividad03
                 }
             }
 
-            Console.WriteLine("No se ha encontrado una cuenta que coincida");
+            Console.WriteLine("No se ha encontrado una cuenta en el maestro");
             return null;
         }
     }

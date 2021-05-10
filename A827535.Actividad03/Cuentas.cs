@@ -27,7 +27,7 @@ namespace A827535.Actividad03
     public void Mostrar()
     {
         Console.WriteLine();
-        Console.WriteLine($"Codigo cuenta: {CodCuenta}");
+        Console.WriteLine($"Cod. Cuenta: {CodCuenta}");
         Console.WriteLine($"Fecha: {Fecha.ToShortDateString()}");
         Console.WriteLine($"Debe: {Debe}");
         Console.WriteLine($"Haber: {Haber}");
@@ -40,7 +40,7 @@ namespace A827535.Actividad03
     {
         var modelo = new Cuentas();
         modelo.CodCuenta = IngresarCodigoCuenta(obligatorio: false);
-        modelo.Fecha = IngresarFecha("Ingrese la fecha", obligatorio: false);
+        modelo.Fecha = IngresarFecha("Ingrese una fecha", obligatorio: false);
         return modelo;
     }
     public bool CoincideCon(Cuentas modelo)
@@ -58,7 +58,7 @@ namespace A827535.Actividad03
 
     private static int IngresarCodigoCuenta(bool obligatorio = true)
     {
-        var titulo = "Ingresar el código de la cuenta";
+        var titulo = "Ingrese la cuenta";
         if (!obligatorio)
         {
             titulo += " o presione ENTER si desea continuar";
@@ -75,7 +75,7 @@ namespace A827535.Actividad03
 
             if (!int.TryParse(ingreso, out var codigoCuenta))
             {
-                Console.WriteLine("No ha ingresado un codigo de cuenta válido");
+                Console.WriteLine("No ha ingresado una cuenta válida");
                 continue;
             }
 
@@ -109,7 +109,7 @@ namespace A827535.Actividad03
             }
             if (fechaNacimiento > DateTime.Now)
             {
-                Console.WriteLine("Debe ingresar una fecha menor a la actual");
+                Console.WriteLine("Debe ingresar una fecha correcta");
                 continue;
             }
             return fechaNacimiento;

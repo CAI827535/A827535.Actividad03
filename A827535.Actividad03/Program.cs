@@ -39,7 +39,7 @@ namespace A827535.Actividad03
                         salir = true;
                         break;
                     default:
-                        Console.WriteLine("Ingrese una opción correcta");
+                        Console.WriteLine("Ingrese una opción coincidente al lista previo");
                         break;
                 }
 

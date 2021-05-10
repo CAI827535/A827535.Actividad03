@@ -49,7 +49,7 @@ namespace A827535.Actividad03
                 if (entradasC.Count == 0)
                 {
 
-                    Console.WriteLine("Imposible actualizar las cuentas del Libro Mayor ya que no fueron cargadas previamente" +
+                    Console.WriteLine("Imposible actualizar las cuentas del Libro Mayor ya que no existe una carga previa" +
                         ".");
                 }
                 else
@@ -94,15 +94,13 @@ namespace A827535.Actividad03
             }
             if (Mensaje == "")
             {
-                Console.WriteLine("No se actualizó ninguna cuenta.");
+                Console.WriteLine("No se actualizó ninguna cuenta");
             }
             if (Mensaje != "")
             {
-                Console.WriteLine("Las cuentas y los datos que fueron actualizados son: " + System.Environment.NewLine + Mensaje);
+                Console.WriteLine("Datos actualizados: " + System.Environment.NewLine + Mensaje);
             }
         }
-
-
         public static Cuentas Seleccionar()
         {
             var modelo = Cuentas.CrearModeloBusqueda();
@@ -114,7 +112,7 @@ namespace A827535.Actividad03
                 }
             }
 
-            Console.WriteLine("No se ha encontrado una cuenta que coincida");
+            Console.WriteLine("No se ha encontrado la cuenta en el maestro");
             return null;
         }
 

@@ -40,7 +40,7 @@ namespace A827535.Actividad03
         public static Asientos CrearModeloBusqueda()
         {
             var modelo = new Asientos();
-            modelo.NroAsiento = IngresarNumeroAsiento(obligatorio: false);
+            modelo.NroAsiento = IngresarNroAsiento(obligatorio: false);
             return modelo;
         }
         public bool CoincideCon(Asientos modelo)
@@ -51,7 +51,7 @@ namespace A827535.Actividad03
             }
             return true;
         }
-        private static int IngresarNumeroAsiento(bool obligatorio = true)
+        private static int IngresarNroAsiento(bool obligatorio = true)
         {
             var titulo = "Ingrese el nro de asiento";
             if (!obligatorio)
